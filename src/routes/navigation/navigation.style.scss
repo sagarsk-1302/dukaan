@@ -1,0 +1,23 @@
+
+
+.navigation-bar{
+    height:60px;
+    display: flex;
+    align-items:center;
+    align-content: center;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+
+    .logo{
+        height:70px;
+        margin:3px;
+        box-sizing: border-box;
+        margin-bottom: 0%;
+    }
+
+    *{
+        text-decoration: none;
+        color: black;
+        padding: 8px;
+    }
+}
