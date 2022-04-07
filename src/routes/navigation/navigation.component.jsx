@@ -10,8 +10,7 @@ const Navigation =()=>{
           <Link to='/' ><Logo className="logo"/></Link>
           <div className="links">
             <Link to='/shops'>Shops</Link>
-            <Link to='/shops'>Shops1</Link>
-            <Link to='/shops'>Shops2</Link>
+            <Link to='/sign-in'>SignIn</Link>
           </div>
           
         </div>
