@@ -10,7 +10,7 @@ const Navigation =()=>{
           <Link to='/' ><Logo className="logo"/></Link>
           <div className="links">
             <Link to='/shops'>Shops</Link>
-            <Link to='/sign-in'>SignIn</Link>
+            <Link to='/auth'>Auth</Link>
           </div>
           
         </div>
