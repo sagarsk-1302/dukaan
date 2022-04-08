@@ -12,22 +12,21 @@ const defaultfFormFields = {
 }
 const SignupForm = () =>{
     const [formFields,setFormFields] = useState(defaultfFormFields)
-
+    const {displayName, email, password, confirmPassword} = formFields;
     const submitHandler = async (event)=>{
         event.preventDefault();
-        const {displayName, email, password, confirmPassword} = formFields;
-        if(password != confirmPassword ){
+        if(password !== confirmPassword ){
             alert("password do not match ")
             return;
         }
         try{
             const response = await createaUserWithEmailAndPassword(email,password);
             const docref = await createUserDocumentFromAuth(response.user,{displayName})
-            console.log(docref);
+            alert("Signed up, Please login! ")
         }catch(error){
-            if(error.code== "auth/email-already-in-use"){
+            if(error.code=== "auth/email-already-in-use"){
                 alert("Account cannot be created, email already exists")
-            }if(error.code=="auth/weak-password"){
+            }if(error.code==="auth/weak-password"){
                 alert("Enter password of 6 characters of more")
             }
             else{
@@ -35,7 +34,7 @@ const SignupForm = () =>{
             }
          
         }
-        
+       setFormFields(defaultfFormFields); 
     }
     const onChangeHandler = (event) =>{
         const {name, value} = event.target;
@@ -48,13 +47,13 @@ const SignupForm = () =>{
             <h4>Sign up</h4>
         <form onSubmit={submitHandler}>
             <label htmlFor="">User Name</label>
-            <Input type="text" name="displayName" className="form-control" onChange={onChangeHandler}/>
+            <Input type="text" name="displayName" className="form-control" required onChange={onChangeHandler} value={displayName}/>
             <label htmlFor="">Email</label>
-            <Input type="email" name="email" className="form-control" onChange={onChangeHandler}/>
+            <Input type="email" name="email" className="form-control" required onChange={onChangeHandler} value={email}/>
             <label htmlFor="">password</label>
-            <Input type="password" name="password" className="form-control" onChange={onChangeHandler}/>
+            <Input type="password" name="password" className="form-control" required onChange={onChangeHandler} value={password}/>
             <label htmlFor="">Confirm Password</label>
-            <Input type="password" name="confirmPassword" className="form-control" onChange={onChangeHandler}/>
+            <Input type="password" name="confirmPassword" className="form-control" required onChange={onChangeHandler} value={confirmPassword}/>
             <button type="submit">Signup</button>
         </form>
         </div>
