@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./routes/home/home.component";
 import Auth from "./routes/auth-component/auth.component";
-
+import Shop from "./routes/shop.component/shop.component";
 import Navigation from "./routes/navigation/navigation.component";
 
 const App= () => {
@@ -9,7 +9,7 @@ const App= () => {
     <Routes>
       <Route path="/" element={<Navigation/>}>
         <Route index element={<Home/>}/>
-        <Route path="shops"/>
+        <Route path="shop" element={<Shop/>}/>
         <Route path="auth" element={<Auth/>}/>  
       </Route>
     </Routes>
