@@ -1,0 +1,35 @@
+.shopping-cart{
+    position: absolute;
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // left: 85%;
+    right: 10px;
+    top: 50px;
+    z-index: 4;
+    .items{
+        min-width: 200px;
+        max-width: 200px;
+        max-height: 200px;
+        min-height: 200px;
+        overflow: scroll;
+    }
+    .btn-checkout{
+        width: 90%;
+        margin-bottom: 2px;
+        height:30px;
+        background-color: black;
+        color: white;
+        border-radius: 8px;
+    }
+    .btn-checkout:hover{
+        background-color: white;
+        color: black;
+    }
+
+}
+

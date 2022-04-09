@@ -1,0 +1,24 @@
+.cart-icon{
+    box-sizing: border-box;
+    padding: 10px;
+    .item-count{
+        position:absolute;
+        // visibility: hidden;
+        right: 10px;
+        top: 35px;
+        background-color: white;
+        border-radius: 3px;
+        padding:1px;
+        font-size: 13px;
+        border:0.5px solid black
+    }
+    .icon{
+        height: 20px;
+        width: 20px;
+        padding: 0%;
+    }
+}
+
+.cart-icon:hover{
+    cursor: pointer;
+}
