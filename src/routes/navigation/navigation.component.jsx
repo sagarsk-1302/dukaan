@@ -1,5 +1,5 @@
 import { Outlet, Link } from "react-router-dom";
-import { Fragment, useContext, useState } from "react";
+import { Fragment, useContext } from "react";
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 import './navigation.style.scss';
 import { Usercontext } from "../../components/user.context/user.context.component";

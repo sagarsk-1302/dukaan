@@ -1,0 +1,17 @@
+.row{
+    .image{
+        img{
+            width: 100px;
+        }
+    }
+    .quantity-control{
+        width: 25px;
+        height: 25px;
+    }
+    .quantity{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        align-content: space-between;
+    }
+} 
