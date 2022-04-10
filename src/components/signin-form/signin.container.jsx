@@ -4,7 +4,7 @@ import { useState } from "react";
 import { SignInwithEmailPassword } from "../../utils/firebase.utils/firebase.utils";
 import {signInWithGooglePopup, createUserDocumentFromAuth} from '../../utils/firebase.utils/firebase.utils';
 import { Usercontext } from "../user.context/user.context.component";
-
+import './signin.styles.scss';
 
 const defaultfFormFields = {
     email :"",
@@ -52,8 +52,8 @@ const SignIn = () =>{
             <label htmlFor="">password</label>
             <Input type="password" name="password" className="form-control" onChange={onChangeHandler}  required value={password}/>
             <div className="buttons">
-                <button type="submit">SignIn</button>
-                <button type="button" onClick={googlesignInWithPopup}>Signin with Google</button>
+                <button type="submit" className="btn-signin">SignIn</button>
+                <button type="button" className="btn-signingoogle" onClick={googlesignInWithPopup}>Signin with Google</button>
             </div>  
         </form>
         </div>

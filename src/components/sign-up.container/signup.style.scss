@@ -1,3 +1,22 @@
+
 .form-control{
     display:block;
+    .btn-signup{
+        background-color: green;
+        padding: 6px;
+        color: white;
+        border: 1 solid rgb(185, 183, 183);
+        border-radius: 6px;
+        margin:3px
+    }
+}
+.btn-signup{
+    background-color: rgb(201, 95, 8);
+    padding: 6px;
+    color: white;
+    border: 1 solid rgb(185, 183, 183);
+    border-radius: 6px;
+    margin:3px;
+    margin-left: 0;
+    margin-top: 15px;
 }
