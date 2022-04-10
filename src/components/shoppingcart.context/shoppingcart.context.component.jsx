@@ -1,6 +1,5 @@
 import { createContext, useState } from "react"
 
-
 export const ShoppingCartContext = createContext({
     isCartOpen: false,
     setIsCartOpen: () => { },

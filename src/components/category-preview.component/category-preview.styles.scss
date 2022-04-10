@@ -1,0 +1,22 @@
+.category-preview{
+    border-bottom: 2px solid black;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    .products{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:center;
+        
+    }
+    h3{
+       text-align: center;
+       font-size: 25px;
+    }
+    .navigate:hover{
+        cursor:pointer;
+    }
+}
+
+

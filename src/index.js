@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { UserProvider } from './components/user.context/user.context.component'
-import { ProductsProvider } from './components/products.context/product.context';
+import { CategoryProvider } from './components/category.context/category.context';
 import { ShoppingCartProvider } from './components/shoppingcart.context/shoppingcart.context.component';
 
 ReactDOM.render(
@@ -13,11 +13,11 @@ ReactDOM.render(
 
     <BrowserRouter>
       <UserProvider>
-        <ProductsProvider>
+        <CategoryProvider>
           <ShoppingCartProvider>
             <App />
           </ShoppingCartProvider>
-        </ProductsProvider>
+        </CategoryProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>,
