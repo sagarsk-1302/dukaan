@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
-import { useContext } from "react"
-import { CategoryContext } from "../../components/category.context/category.context"
 import ProductCard from "../../components/product.card/product-card.container"
 import './category.style.scss'
+import { useSelector } from "react-redux"
+import { getCategoryMap } from "../../store/category/category-selector"
 const CategoryRoute = () => {
-    const { categoryMap } = useContext(CategoryContext)
+    const  categoryMap = useSelector(getCategoryMap)
     const { category } = useParams()
     return (
         <div className="category">

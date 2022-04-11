@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import Input from "../input.container/input.container";
 import { useState } from "react";
 import { SignInwithEmailPassword } from "../../utils/firebase.utils/firebase.utils";
 import {signInWithGooglePopup, createUserDocumentFromAuth} from '../../utils/firebase.utils/firebase.utils';
-import { Usercontext } from "../user.context/user.context.component";
 import './signin.styles.scss';
 
 const defaultfFormFields = {
